@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            display: flex;
+            /* justify-content: space-between; */
+        }
+        .p{
+            width: 15px;
+            height: 15px;
+            background-image: url(./img/ico.png); 
+            background-position:-0px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        设置密码: 
+        
+        <input type="text" onblur="close123()" >
+        
+        
+        <div style="margin-left: 10px;color: green;display: flex;"><div class="p"></div><span>请输入登录密码</span></div>
+    </div>
+    
+</body>
+<script>
+    function close123(){
+        var inp=document.querySelector("input").value;
+        var p=document.querySelector(".p")
+        var c=document.querySelector("span")
+        console.log(p);
+        console.log(inp);
+        
+        if (inp.length>=6 && inp.length<=16) {
+            p.style.backgroundPosition="-30px 0";
+            c.innerText="密码格式正确";
+            c.style.color="green";
+        }else{
+            p.style.backgroundPosition="-60px 0";
+            c.innerText="密码格式不正确"
+        }
+    }
+</script>
+</html>

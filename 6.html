@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="a" style="width: 100px;height: 200px;"><h1><span></span></h1></div>
+    <img src="./img/ico.png" alt="">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    const allElementsInBody = document.body.querySelectorAll('*');
+    const obj={}
+    for (let i = 0; i < allElementsInBody.length; i++) {
+        console.log(allElementsInBody[i]);
+    }
+   console.log(allElementsInBody);
+   console.log(allElementsInBody[0].style);
+   console.log(allElementsInBody[2].id);
+</script>
+</html>

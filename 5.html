@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <button onclick="SelectAll()">全选</button>
+    <button onclick="notSelectAll()">全不选</button>
+    <button onclick="reverseSelection()">反选</button>
+</body>
+<script>
+    function SelectAll(){
+        var inp=document.getElementsByTagName("input");
+        console.log(inp.length);
+        
+        for (let i = 0; i < inp.length; i++) {
+            console.log(1);
+            inp[i].checked="checked";
+        }
+    }
+    function notSelectAll(){
+        var inp=document.getElementsByTagName("input");
+        console.log(inp.length);
+        console.log(inp[0].checked);
+        
+        for (let i = 0; i < inp.length; i++) {
+            console.log(1);
+            inp[i].checked="";
+        }
+    }
+    function reverseSelection(){
+        var inp=document.getElementsByTagName("input");
+         console.log(inp[0].checked);
+        
+        for (let i = 0; i < inp.length; i++) {
+            if (inp[i].checked===false) {
+                inp[i].checked="checked";
+            }else if(inp[i].checked===true){
+                inp[i].checked="";
+            }
+        }
+    }
+</script>
+</html>

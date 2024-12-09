@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            width: 25px;
+            height: 25px;
+            background-image: url(./img/sprite.png);
+            background-position:0 0px;
+            list-style: none;
+            border: 1px solid #ccc;
+        }
+        ul{
+            width: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    var li=document.getElementsByTagName('li')
+    console.log(li);
+    var a="";
+    for(var i=0 ;i<li.length;i++){
+        a="background-position:0 "+-44*i + "px";
+        li[i].style=a;
+    }
+</script>
+</html>

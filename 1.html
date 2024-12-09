@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" style="width: 300px;height: 300px;">
+</body>
+<script>
+    var data = new Date();
+    console.log(data.getHours());
+    if (data.getHours()>=6 &&data.getHours()< 14) {
+        alert("上午好");
+        document.querySelector('img').src="./img/上午.webp"
+    }else if (data.getHours()>=14 &&data.getHours()< 20) {
+        alert("下午好");
+        document.querySelector('img').src="./img/下午.jpeg"
+    }else if (data.getHours()>=20 || data.getHours()< 6) {
+        alert("晚上好");
+        document.querySelector('img').src="./img/晚上.jpeg"
+    }
+</script>
+</html>
